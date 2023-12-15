@@ -14,3 +14,6 @@ jobs:
         server: web0084.zxcs.nl
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
+        exclude: "[**/.git*/**, **/node_modules/**, **/build/, .README.MD, .gitignore]"
+        protocol: ftps
+        log-level: verbose
