@@ -67,8 +67,8 @@ foreach ($cardsArray as $cardNumber => $card) {
             $count++;
             $class = 'green';
         } elseif (in_array($number, $newNumbers)) {
-            $class = 'blue';
             $count++;
+            $class = 'blue';
         }
 
         echo '<span class="' . $class . '">' . $number . '</span> - ';
