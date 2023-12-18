@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo?!</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+        .yellow {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
 <?php
 
 $cardsArray = [
@@ -42,17 +62,16 @@ foreach ($cardsArray as $cardNumber => $card) {
     echo 'Kaart:' . $cardNumber . ' | ';
 
     foreach ($card as $number) {
+        $class = 'red';
         if (in_array($number, $numbersArray)) {
             $count++;
-
-            if (empty($newNumbers)) {
-                echo '<span style="color:green;">' . $number . '</span> - ';
-            }
+            $class = 'green';
         } elseif (in_array($number, $newNumbers)) {
-            echo '<span style="color:green;">' . $number . '</span> - ';
-        } else {
-            echo '<span style="color:red;">' . $number . '</span> - ';
+            $class = 'yellow';
+            $count++;
         }
+
+        echo '<span class="' . $class . '">' . $number . '</span> - ';
     }
 
     if ($count === 10) {
@@ -63,3 +82,7 @@ foreach ($cardsArray as $cardNumber => $card) {
 
     echo '<br>';
 }
+
+?>
+</body>
+</html>
