@@ -46,10 +46,10 @@ foreach ($cardsArray as $cardNumber => $card) {
             $count++;
 
             if (empty($newNumbers)) {
-                echo $number . ' - ';
+                echo '<span style="color:green;">' . $number . '</span> - ';
             }
         } elseif (in_array($number, $newNumbers)) {
-            echo $number . ' - ';
+            echo '<span style="color:green;">' . $number . '</span> - ';
         } else {
             echo '<span style="color:red;">' . $number . '</span> - ';
         }
