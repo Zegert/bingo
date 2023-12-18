@@ -11,8 +11,8 @@
         .green {
             color: green;
         }
-        .yellow {
-            color: yellow;
+        .blue {
+            color: blue;
         }
     </style>
 </head>
@@ -67,7 +67,7 @@ foreach ($cardsArray as $cardNumber => $card) {
             $count++;
             $class = 'green';
         } elseif (in_array($number, $newNumbers)) {
-            $class = 'yellow';
+            $class = 'blue';
             $count++;
         }
 
