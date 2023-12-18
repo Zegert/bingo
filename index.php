@@ -48,10 +48,10 @@ foreach ($cardsArray as $cardNumber => $card) {
             if (empty($newNumbers)) {
                 echo $number . ' - ';
             }
-        }
-
-        if (in_array($number, $newNumbers)) {
+        } elseif (in_array($number, $newNumbers)) {
             echo $number . ' - ';
+        } else {
+            echo '<div style="color:red;">' . $number . '</div> - ';
         }
     }
 
