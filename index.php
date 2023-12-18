@@ -51,7 +51,7 @@ foreach ($cardsArray as $cardNumber => $card) {
         } elseif (in_array($number, $newNumbers)) {
             echo $number . ' - ';
         } else {
-            echo '<div style="color:red;">' . $number . '</div> - ';
+            echo '<span style="color:red;">' . $number . '</span> - ';
         }
     }
 
