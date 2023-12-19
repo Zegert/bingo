@@ -80,7 +80,7 @@
             if (in_array($number, $numbersArray)) {
                 $count++;
                 $class = 'green';
-            } elseif (in_array($number, $newNumbers)) {
+            } elseif (isset($newNumbers) && in_array($number, $newNumbers)) {
                 $count++;
                 $class = 'blue';
             }
