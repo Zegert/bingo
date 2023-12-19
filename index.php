@@ -22,6 +22,11 @@
 
 <body>
 
+<form method="get">
+    <input type="text" name="new" id="new">
+    <input type="submit" value="Check nummers">
+</form>
+
     <?php
 
     $cardsArray = [
@@ -62,7 +67,9 @@
 
     $url = parse_url("https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
     parse_str($url['query'], $query);
-    $newNumbers = json_decode($query['new']) ?? [];
+    if (isset($query['new']) && !empty($query['new'])) {
+        $newNumbers = json_decode($query['new']) ?? [];
+    }
 
     foreach ($cardsArray as $cardNumber => $card) {
         $count = 0;
@@ -92,5 +99,4 @@
 
     ?>
 </body>
-
 </html>
