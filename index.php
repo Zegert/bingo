@@ -56,7 +56,7 @@ $numbersArray = [
 
 $url = parse_url("https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
 parse_str($url['query'], $query);
-$newNumbers = json_decode($query['new_items']) ?? [];
+$newNumbers = json_decode($query['new']) ?? [];
 
 foreach ($cardsArray as $cardNumber => $card) {
     $count = 0;
