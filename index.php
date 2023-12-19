@@ -69,6 +69,10 @@
     parse_str($url['query'], $query);
     if (isset($query['new']) && !empty($query['new'])) {
         $newNumbers = json_decode($query['new']) ?? [];
+        
+        if (!is_array($newNumbers)) {
+            unset($newNumbers);
+        }
     }
 
     foreach ($cardsArray as $cardNumber => $card) {
