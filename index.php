@@ -23,7 +23,7 @@
 <body>
 
 <form method="get">
-    <input type="text" name="new" id="new">
+    <input type="text" name="new" id="new" placeholder="[35,81]" value="[35]">
     <input type="submit" value="Check nummers">
 </form>
 
