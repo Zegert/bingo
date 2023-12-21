@@ -1,4 +1,4 @@
-aan<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 
 <head>
